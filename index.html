@@ -7,42 +7,86 @@
     <title>Document</title>
   </head>
   <body>
-    <form class="js-speaker-form">
-      <div>
+    <form class="form js-speaker-form">
+      <div class="form-filed">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          autofocus
+          autocomplete="name"
+          placeholder="First name"
+        />
       </div>
-      <div>
+      <div class="form-filed">
         <label for="tel">telephone</label>
-        <input type="tel" name="tel" id="tel" />
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          autocomplete="tel"
+          placeholder="+380**-000-00-00"
+        />
       </div>
-      <div>
+      <div class="form-filed">
         <label for="mail">mail</label>
-        <input type="email" name="mail" id="mail" />
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="bulach@gmail.com"
+        />
       </div>
-      <div role="group">
-        <input type="checkbox" name="tech" value="html" id="html" />
-        <label for="html">Html</label>
-        <input type="checkbox" name="tech" value="css" id="css" />
-        <label for="html">Css</label>
-        <input type="checkbox" name="tech" value="js" id="js" />
-        <label for="js">javaScript</label>
+      <div role="group" class="group">
+        <h2 class="group-title">Techniks</h2>
+        <ul class="group-topick">
+          <li>
+            <input type="checkbox" name="tech" value="html" id="html" />
+            <label for="html">Html</label>
+          </li>
+          <li>
+            <input type="checkbox" name="tech" value="css" id="css" />
+            <label for="html">Css</label>
+          </li>
+          <li>
+            <input type="checkbox" name="tech" value="js" id="js" />
+            <label for="js">javaScript</label>
+          </li>
+        </ul>
       </div>
-      <div role="group">
-        <input type="radio" name="expiriens" value="jun" id="jun" />
-        <label for="jun">junior</label>
-        <input type="radio" name="expiriens" value="mid" id="mid" />
-        <label for="mid">midle</label>
-        <input type="radio" name="expiriens" value="sin" id="sin" />
-        <label for="sin">sinior</label>
-        <input type="radio" name="expiriens" value="jodo" id="jodo" />
-        <label for="jodo">jodo</label>
+      <div role="group" class="group">
+        <h2 class="group-title">Expireans</h2>
+        <ul class="group-topick">
+          <li>
+            <input type="radio" name="expiriens" value="jun" id="jun" />
+            <label for="jun">junior</label>
+          </li>
+          <li>
+            <input type="radio" name="expiriens" value="mid" id="mid" />
+            <label for="mid">midle</label>
+          </li>
+          <li>
+            <input type="radio" name="expiriens" value="sin" id="sin" />
+            <label for="sin">sinior</label>
+          </li>
+          <li>
+            <input type="radio" name="expiriens" value="jodo" id="jodo" />
+            <label for="jodo">jodo</label>
+          </li>
+        </ul>
       </div>
-      <div>
+      <div class="form-filed">
         <label for="coments">add coments</label>
-        <textarea name="coments" id="coments" va rows="10"></textarea>
+        <textarea
+          name="coments"
+          id="coments"
+          va
+          rows="8"
+          placeholder="add coments"
+        ></textarea>
       </div>
-      <div>
+      <div class="form-filed">
         <input type="checkbox" name="policy" id="policy" />
         <label for="policy">YES</label>
       </div>

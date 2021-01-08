@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="js-speaker-form">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="tel">telephone</label>
+        <input type="tel" name="tel" id="tel" />
+      </div>
+      <div>
+        <label for="mail">mail</label>
+        <input type="email" name="mail" id="mail" />
+      </div>
+      <div role="group">
+        <input type="checkbox" name="tech" value="html" id="html" />
+        <label for="html">Html</label>
+        <input type="checkbox" name="tech" value="css" id="css" />
+        <label for="html">Css</label>
+        <input type="checkbox" name="tech" value="js" id="js" />
+        <label for="js">javaScript</label>
+      </div>
+      <div role="group">
+        <input type="radio" name="expiriens" value="jun" id="jun" />
+        <label for="jun">junior</label>
+        <input type="radio" name="expiriens" value="mid" id="mid" />
+        <label for="mid">midle</label>
+        <input type="radio" name="expiriens" value="sin" id="sin" />
+        <label for="sin">sinior</label>
+        <input type="radio" name="expiriens" value="jodo" id="jodo" />
+        <label for="jodo">jodo</label>
+      </div>
+      <div>
+        <label for="coments">add coments</label>
+        <textarea name="coments" id="coments" va rows="10"></textarea>
+      </div>
+      <div>
+        <input type="checkbox" name="policy" id="policy" />
+        <label for="policy">YES</label>
+      </div>
+      <button type="submit">go</button>
+    </form>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+  </body>
+</html>
